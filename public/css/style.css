@@ -233,7 +233,10 @@ body {
   }
 
   .cus-p {
-    padding: 0px;
+    padding: 0px !important;
+  }
+  .cus-gap {
+    gap: 20px !important;
   }
   .fs-1 {
     font-size: 20px !important;
@@ -247,7 +250,7 @@ body {
   .hero-content,
   .end-content {
     width: 100% !important;
-    padding: 0px 3px;
+    padding: 0px 4px;
   }
 }
 
