@@ -1,39 +1,3 @@
-// $(document).ready(function () {
-//   $(".owl-carousel").owlCarousel({
-//     items: 3,
-//     loop: true,
-//     nav: true,
-//     margin: 10,
-//     responsiveClass: true,
-//     responsive: {
-//       0: {
-//         items: 1,
-//         nav: true,
-//       },
-//       600: {
-//         items: 3,
-//         nav: false,
-//       },
-//       1000: {
-//         items: 3,
-//         nav: true,
-//         loop: false,
-//       },
-//     },
-//     dots: false,
-//     navText: [
-//       '<i class="fa fa-chevron-left">&#8594</i>',
-//       '<i class="fa fa-chevron-right">Right</i>',
-//     ],
-//   });
-// });
-// document.addEventListener("DOMContentLoaded", function () {
-//   const x = document.getElementsByClassName("fa-chevron-left");
-//   x.addEventListener("click", () => {
-//     alert("kjld");
-//   });
-//   console.log(x);
-// });
 
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
@@ -68,7 +32,7 @@ carousel.classList.add("no-transition");
 carousel.scrollLeft = carousel.offsetWidth;
 carousel.classList.remove("no-transition");
 
-// Add event listeners for the arrow buttons to scroll the carousel left and right
+
 arrowBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
@@ -117,7 +81,7 @@ const infiniteScroll = () => {
 };
 
 const autoPlay = () => {
-  if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+  if (window.innerWidth < 800 || !isAutoPlay) return; 
   // Autoplay the carousel after every 2500 ms
   timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
 };
